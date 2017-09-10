@@ -1,0 +1,29 @@
+{
+  "name": "pidpid",
+  "version": "1.0.0",
+  "description": "PidPid documentation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doprdele/pidpid.git"
+  },
+  "author": "Evan Sarmiento",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doprdele/pidpid/issues"
+  },
+  "homepage": "https://github.com/doprdele/pidpid#readme",
+  "dependencies": {
+    "grunt-contrib-imagemin": "^2.0.1",
+    "grunt-contrib-uglify": "^3.0.1",
+    "grunt-exec": "^3.0.0",
+    "grunt-gh-pages": "^2.0.0",
+    "markdown-styles": "^3.1.9"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1"
+  }
+}
