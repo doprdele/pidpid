@@ -7,6 +7,12 @@ module.exports = function(grunt) {
             test: {
                 cmd: './node_modules/markdown-styles/bin/generate-md --layout layout'
             }
+        },
+        'gh-pages': {
+            options: {
+                base: 'output'
+            },
+            src: ['**']
         }
     });
 
@@ -16,18 +22,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-gh-pages');
     grunt.loadNpmTasks('grunt-contrib-copy');
 
-    grunt.registerTask('generate-md', 'Generates markdown', function() {
-        mds.render({
-                input: path.resolve(__dirname, 'input'),
-                output: path.resolve(__dirname, 'output'),
-                layout: path.resolve(__dirname, 'layout')
-            },
-            function() {
-                console.log('All done!');
-            });
-    });
-
     // The default tasks to run when you type: grunt
-    grunt.registerTask('default', ['exec']);
+    grunt.registerTask('default', ['exec', 'gh-pages']);
 
 };
