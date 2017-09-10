@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PidPid</title>
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/hljs-github.min.css" />
+    <script src="https://use.fontawesome.com/ce55761844.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+            <a class="navbar-brand" href="./index.html">PidPid</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="./index.html">Introduction</a></li>
+                <li><a href="./viewing_recent_products.html">Viewing recent products</a></li>
+                <li><a href="./searching_for_products.html">Searching for products</a></li>
+                <li><a href="./api.html">API</a></li>
+                <li><a href="./faq.html">FAQ</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="https://doprdele.github.io/pidpid-dashboard/">PidPid dashboard</a></li>
+                <li><a href="https://twitter.com/snkattckco"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                <li><a href="https://github.com/doprdele/pidpid"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container"><ul class="nav nav-list">
+</ul>
+<h1 id="pidpid"><a class="header-link" href="#pidpid"></a>PidPid</h1>
+<h2 id="searching-for-products-and-advanced-queries"><a class="header-link" href="#searching-for-products-and-advanced-queries"></a>Searching for products and advanced queries</h2>
+<p>There are <strong>two</strong> types of scrapers in PidPid. </p>
+<h3 id="metadata-scrapers"><a class="header-link" href="#metadata-scrapers"></a>Metadata scrapers</h3>
+<p>Metadata scrapers discover the product name, product id, link, and sometimes the product image.</p>
+<h3 id="image-scrapers"><a class="header-link" href="#image-scrapers"></a>Image scrapers</h3>
+<blockquote>
+<p>Barneys, Size, JDSports, FootPatrol, MrPorter, and NetAPorter. </p>
+</blockquote>
+<p>Products scraped by an image scraper do not have a name tag associated <em>at first</em>. For <strong>image</strong> scrapers, you&#39;ll need to manually check the images scraped in the respective indexes in order to discover early links or product ids. This is a limitation of the website being scraped rather than a limitation in PidPid&#39;s scraping methods. However, for live products, the metadata is attached and searchable. This tutorial will focus on searching in metadata-oriented indices. Every index except the ones mentioned above are metadata oriented.</p>
+<h2 id="searching-for-a-product"><a class="header-link" href="#searching-for-a-product"></a>Searching for a product</h2>
+<ul class="list">
+<li>Open the index/site from the Dashboard.</li>
+<li>Select an appropriate timeframe.</li>
+<li><p>Search for a product by brand, pid, or name. To search for any product containing the word <em>yeezy</em> in any of its fields, enter the following in the search bar:</p>
+<pre class="hljs"><code><span class="hljs-strong">*yeezy*</span></code></pre></li>
+<li><p>The asteriks are formally called <em>globs</em>. Globs will match any characters before or after the word yeezy. For example, a product with the title <em>Yeezy Boost 350 V2 Beluga</em> or <em>Kanye West Yeezy</em> will match this search.</p>
+</li>
+</ul>
+<p><a href="./images/searchglob.png" class="thumbnail">
+<img src="./images/searchglob.png" alt="Searching for products using globs">
+</a></p>
+<h2 id="advanced-searching"><a class="header-link" href="#advanced-searching"></a>Advanced searching</h2>
+<ul class="list">
+<li>Every product listed has a number of fields, such as <code>name</code>, <code>pid</code>, <code>brand</code>, etc. Not every index has the same fields, however all indexes contain at least the <code>name</code>, <code>pid</code>, and <code>timestamp</code> fields. The variation of fields depends on the data scraped.</li>
+<li>You can search a specific field or across multiple fields. If we only want to search for products that have the brandname <em>Adidas</em> on Antonini, enter one of the the following into the search bar, depending on how strict you want your search to be.<pre class="hljs"><code><span class="hljs-symbol">brand:</span>adidas</code></pre><pre class="hljs"><code>brand:<span class="hljs-strong">*adidas*</span></code></pre></li>
+</ul>
+<p><a href="./images/searchbrand.png" class="thumbnail">
+<img src="./images/searchbrand.png" alt="Searching for products via brand name">
+</a></p>
+<ul class="list">
+<li>To search a range of pids, enter the following into the search bar. The following search displays all products with a pid greater than 550000 and less than 600000.<pre class="hljs"><code><span class="hljs-symbol">pid:</span>&gt;<span class="hljs-number">550000</span> <span class="hljs-keyword">AND</span> pid:&lt;<span class="hljs-number">600000</span></code></pre></li>
+</ul>
+<p><a href="./images/searchbrand.png" class="thumbnail">
+<img src="./images/searchpidrange.png" alt="Searching for products in a pid range">
+</a></p>
+<h2 id="more-information"><a class="header-link" href="#more-information"></a>More information</h2>
+<ul class="list">
+<li>For more information on Kibana/Elasticsearch queries, read the following: <a href="https://www.elastic.co/guide/en/kibana/3.0/queries.html">Kibana User Guide | Queries and Filters</a></li>
+</ul>
+
+    </div>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>

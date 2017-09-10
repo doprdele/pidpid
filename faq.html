@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PidPid</title>
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/hljs-github.min.css" />
+    <script src="https://use.fontawesome.com/ce55761844.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+            <a class="navbar-brand" href="./index.html">PidPid</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="./index.html">Introduction</a></li>
+                <li><a href="./viewing_recent_products.html">Viewing recent products</a></li>
+                <li><a href="./searching_for_products.html">Searching for products</a></li>
+                <li><a href="./api.html">API</a></li>
+                <li><a href="./faq.html">FAQ</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="https://doprdele.github.io/pidpid-dashboard/">PidPid dashboard</a></li>
+                <li><a href="https://twitter.com/snkattckco"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                <li><a href="https://github.com/doprdele/pidpid"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container"><ul class="nav nav-list">
+</ul>
+<h1 id="pidpid"><a class="header-link" href="#pidpid"></a>PidPid</h1>
+<h2 id="faq"><a class="header-link" href="#faq"></a>FAQ</h2>
+<h3 id="what-are-the-list-of-scrapers-offered-in-pidpid?"><a class="header-link" href="#what-are-the-list-of-scrapers-offered-in-pidpid?"></a>What are the list of scrapers offered in PidPid?</h3>
+<p>Check out the <a href="https://doprdele.github.io/pidpid-dashboard/">PidPid Dashboard</a> which lists scrapers currently running and scrapers scheduled to run. This list is updated every thirty minutes, so check back often.</p>
+<h3 id="how-often-are-sites-scraped?"><a class="header-link" href="#how-often-are-sites-scraped?"></a>How often are sites scraped?</h3>
+<p>See above.</p>
+<h3 id="how-do-i-get-support?"><a class="header-link" href="#how-do-i-get-support?"></a>How do I get support?</h3>
+<p>E-mail <a href="support@snkattck.co">support@snkattck.co</a> or contact us on twitter @snkattckco</p>
+<h3 id="how-can-i-report-a-bug?"><a class="header-link" href="#how-can-i-report-a-bug?"></a>How can I report a bug?</h3>
+<p>Please submit a bug report at the [PidPid GitHub issues] page, being as detailed as possible. Good reasons to submit bug reports include, but are not limited to:</p>
+<ul class="list">
+<li>Weird data in the index.</li>
+<li>PID(s) for hyped products not appearing promptly.</li>
+</ul>
+<h3 id="how-can-i-submit-requests-for-new-sites-to-be-scraped?"><a class="header-link" href="#how-can-i-submit-requests-for-new-sites-to-be-scraped?"></a>How can I submit requests for new sites to be scraped?</h3>
+<p>Please submit your request at the <a href="https://github.com/doprdele/pidpid/issues">PidPid GitHub issues</a> page.</p>
+<h3 id="can-you-/-will-you-scrape-shopify-sites?"><a class="header-link" href="#can-you-/-will-you-scrape-shopify-sites?"></a>Can you / will you scrape Shopify sites?</h3>
+<p>Programmatically, scraping Shopify sites for early links isn&#39;t difficult. Simply increment a known product id by 64 in a loop for a given range. However, Shopify product ids range in the trillions and in certain situations don&#39;t increase linearly with time. Scraping Shopify sites becomes so computationally intensive that it&#39;s a waste of time. Until I can discover a more efficient way to scrape Shopify sites, no Shopify sites will be scraped in PidPid. Don&#39;t be fooled by people selling Shopify scrapers -- while they will work, you are very unlikely to find any non-live products within a reasonable amount of time. Expect to wait days to find one early link at worst, at best 12 to 24 hours if you have more than one hundred proxies to avoid rate limiting. Relying on Shopify bots is the best bet here. However, all other types of stores can be scraped. Feel free to make requests.</p>
+<h3 id="are-refunds-offered?"><a class="header-link" href="#are-refunds-offered?"></a>Are refunds offered?</h3>
+<p>No refunds are offered, but you can cancel your subscription at anytime.</p>
+<h3 id="how-can-i-get-notified-when-items-bearing-certain-fields-are-added-to-an-index?"><a class="header-link" href="#how-can-i-get-notified-when-items-bearing-certain-fields-are-added-to-an-index?"></a>How can I get notified when items bearing certain fields are added to an index?</h3>
+<p>Check out the <a href="./api.html">API</a> documentation. We currently only support e-mail notifications, but Slack, Twitter, and Webhook notifications will be added in the future.</p>
+
+    </div>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>
